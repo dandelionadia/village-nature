@@ -1,13 +1,20 @@
 .header {
-    border: 1px solid black;
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
 
     &__logo {
-        background-color: green;
         display: flex;
         align-items: center;
+    }
+}
+
+.logo {
+    width: 100px;
+    height: 60px;
+    
+    &__text {
+        font-weight: 700;
     }
 }
