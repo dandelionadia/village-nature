@@ -3,18 +3,20 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
-
-    &__logo {
-        display: flex;
-        align-items: center;
-    }
 }
 
-.logo {
-    width: 100px;
-    height: 60px;
-    
-    &__text {
-        font-weight: 700;
-    }
+.container-infoPage {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.container-homePage {
+    padding: 0 50px;
+}
+
+.foo {
+    width: 100%;
+    // height: 100%;
 }
