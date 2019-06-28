@@ -11,14 +11,26 @@
         display: inline-block;
         text-transform: uppercase;
         font-weight: 600;
+        position: relative;
     }
 
     &__link {
         text-decoration: none;
         color: $color-black;
+        padding: 0.5rem;
 
         &:hover {
             color: $color-blue;
+        }
+
+        &:hover::after {
+            content: '';
+            width: 5px;
+            height: 5px;
+            bottom: 0;
+            left: 45%;
+            background-color: $color-blue;
+            position: absolute;
         }
     }
 }
