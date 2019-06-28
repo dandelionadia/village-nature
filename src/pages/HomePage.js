@@ -8,13 +8,11 @@ function HomePage() {
         <div className="container-homePage">
             <div className="header">
                 <Logo />
-                <div className="header__menu">
-                    <Menu />
-                </div>
+                <Menu />
             </div>
             <div className="container-infoPage">
                 <HomeInfo />
-                <img className="foo" src="https://cdn.dribbble.com/users/1355613/screenshots/6568571/____41.jpg"></img>
+                <img className="background__img" src="https://cdn.dribbble.com/users/1355613/screenshots/6568571/____41.jpg"></img>
             </div>
         </div>
     )

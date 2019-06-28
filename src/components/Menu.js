@@ -28,7 +28,9 @@ class Menu extends React.Component {
             <div className="menu">
                 <ul className="menu__list">
                     {menu.map((item) => (
-                        <li className="menu__item">{item.value}</li>
+                        <li className="menu__item">
+                            <a className="menu__link" href="#">{item.value}</a>
+                        </li>
                     ))}
                 </ul>
             </div>
