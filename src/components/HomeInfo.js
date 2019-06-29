@@ -10,9 +10,9 @@ class HomeInfo extends React.Component {
                 <h1>title to tilorem</h1>
                 <div className="container-messager">
                     <Avatar />
-                    <span className="message">"It is a long established fact that a reader will be distracted by the readable content of a page."</span>
+                    <span className="message">{this.props.children}</span>
                 </div>
-                <Button />
+                <Button children={'Button Lor'} />
             </div>
         )
     }
