@@ -11,7 +11,7 @@ function HomePage() {
                 <Menu />
             </div>
             <div className="infoPage">
-                <HomeInfo children={"It is a long established fact that a reader will be distracted by the readable content of a page."} />
+                <HomeInfo>"It is a long established fact that a reader will be distracted by the readable content of a page."</HomeInfo>
                 <img className="background__img" src="https://cdn.dribbble.com/users/1355613/screenshots/6568571/____41.jpg"></img>
             </div>
         </div>

@@ -12,7 +12,7 @@ class HomeInfo extends React.Component {
                     <Avatar />
                     <span className="message">{this.props.children}</span>
                 </div>
-                <Button children={'Button Lor'} />
+                <Button>Button Lor</Button>
             </div>
         )
     }

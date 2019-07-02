@@ -27,8 +27,8 @@ class Menu extends React.Component {
         return (
             <div className="menu">
                 <ul className="menu__list">
-                    {menu.map((item) => (
-                        <li key={item.toString()} className="menu__item">
+                    {menu.map((item, index) => (
+                        <li key={index} className="menu__item">
                             <a className="menu__link" href="#">{item.value}</a>
                         </li>
                     ))}
