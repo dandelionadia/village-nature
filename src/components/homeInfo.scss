@@ -1,0 +1,18 @@
+.container-messager {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 50px 0;
+}
+
+.container-homeInfo {
+    margin-right: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.message {
+    color: $color-grey;
+    font-style: italic;
+}
