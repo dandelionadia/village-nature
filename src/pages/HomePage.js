@@ -4,7 +4,6 @@ import Layout from 'atomic-layout'
 import { Menu } from '../components/Menu';
 import { HomeInfo } from '../components/HomeInfo';
 import { Logo } from '../atoms/Logo';
-import styled from 'styled-components'
 
 Layout.configure({
     defaultUnit: 'rem',
@@ -20,9 +19,6 @@ const areasTablet = `
     header header
     info image
 `
-const StyleHeader = styled.header`
-    background-color: red;
-`
 
 const HomePage = () => (
     <Composition
@@ -35,7 +31,7 @@ const HomePage = () => (
     >
         {({ Header, Info, Image }) => (
             <>
-                <Header as={StyleHeader}>
+                <Header flex justifyContent="space-between">
                     <Logo />
                     <Menu />
                 </Header>
