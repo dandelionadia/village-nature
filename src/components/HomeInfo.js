@@ -1,15 +1,18 @@
 import React from 'react';
 import { Button } from '../atoms/Button';
 import { Avatar } from '../atoms/Avatar';
-import styled from 'styled-components'
+import styled from 'styled-components';
+import { useResponsiveProps } from 'atomic-layout'
 
 const StyleTitle = styled.h1`
-    font-size: 45px;
-    
-    @media (min-width: 768px) {
-        font-size: 70px;
-    }
+font-size: ${({ fontSize }) => fontSize}px;
 `
+
+const Title = (props) => {
+    const { children, fontSize } = useResponsiveProps(props)
+    return <StyleTitle fontSize={fontSize}>{children}</StyleTitle>
+}
+
 
 const StyleMessage = styled.span`
     display: flex;
@@ -22,7 +25,7 @@ class HomeInfo extends React.Component {
         return (
             <div className="container-homeInfo">
                 <h3>subtitle</h3>
-                <StyleTitle>title to tilorem</StyleTitle>
+                <Title fontSize={45} fontSizeMd={70}>title to tilorem</Title>
                 <div className="container-messager">
                     <Avatar />
                     <StyleMessage className="message">{this.props.children}</StyleMessage>

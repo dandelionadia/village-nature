@@ -30,8 +30,8 @@ const HomePage = () => (
         areasMd={areasTablet}
         gutter={2}
         padding={2}
-        templateColsMd="30% auto"
-        gap={1}
+        templateColsMd="40% auto"
+        gap={2}
     >
         {({ Header, Info, Image }) => (
             <>
