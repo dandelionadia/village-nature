@@ -19,7 +19,6 @@ const HomePage = () => (
     <Composition
         areas={areasMobile}
         areasMd={areasTablet}
-        gutter={2}
         padding={2}
         templateColsMd="40% auto"
         gap={2}
@@ -36,7 +35,7 @@ const HomePage = () => (
                 <Image>
                     <img className="background__img" src="https://cdn.dribbble.com/users/1355613/screenshots/6568571/____41.jpg" alt="image"></img>
                 </Image>
-                <Info flex justifyContent='center'>
+                <Info flex justifyContent="center">
                     <HomeInfo>"It is a long established fact that a reader will be distracted by the readable content of a page."</HomeInfo>
                 </Info>
             </>
