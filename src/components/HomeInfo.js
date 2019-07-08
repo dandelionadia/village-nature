@@ -24,7 +24,7 @@ const StyleMessage = styled.span`
 class HomeInfo extends React.Component {
     render() {
         return (
-            <div className="container-homeInfo">
+            <Box flex flexDirection="column" justifyContent="center">
                 <h3>subtitle</h3>
                 <Title fontSize={45} fontSizeMd={70}>title to tilorem</Title>
                 <Box marginVertical={3} marginVerticalXl={5} flex flexDirection="row" alignItems="center">
@@ -32,7 +32,7 @@ class HomeInfo extends React.Component {
                     <StyleMessage className="message">{this.props.children}</StyleMessage>
                 </Box>
                 <Button>Button Lor</Button>
-            </div>
+            </Box>
         )
     }
 }
