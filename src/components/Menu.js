@@ -3,10 +3,12 @@ import styled from 'styled-components';
 
 const StyleMenu = styled.ul`
     padding: 0;
-    display: none; 
+    display: none;
+    width: 100%;
 
     @media (min-width: 768px) {
-        display: block;
+        display: flex;
+        justify-content: space-between;
       }
 `
 
@@ -35,15 +37,13 @@ class Menu extends React.Component {
         const { menu } = this.state
 
         return (
-            <div className="menu">
-                <StyleMenu className="menu__list">
-                    {menu.map((item, index) => (
-                        <li key={index} className="menu__item">
-                            <a className="menu__link" href="#">{item.value}</a>
-                        </li>
-                    ))}
-                </StyleMenu>
-            </div>
+            <StyleMenu>
+                {menu.map((item, index) => (
+                    <li key={index} className="menu__item">
+                        <a className="menu__link" href="#">{item.value}</a>
+                    </li>
+                ))}
+            </StyleMenu>
         )
     }
 }

@@ -2,7 +2,8 @@ import React from 'react';
 import { Button } from '../atoms/Button';
 import { Avatar } from '../atoms/Avatar';
 import styled from 'styled-components';
-import { useResponsiveProps } from 'atomic-layout'
+import { useResponsiveProps } from 'atomic-layout';
+import { Box } from 'atomic-layout';
 
 const StyleTitle = styled.h1`
 font-size: ${({ fontSize }) => fontSize}px;
@@ -26,10 +27,10 @@ class HomeInfo extends React.Component {
             <div className="container-homeInfo">
                 <h3>subtitle</h3>
                 <Title fontSize={45} fontSizeMd={70}>title to tilorem</Title>
-                <div className="container-messager">
+                <Box marginVertical={3} marginVerticalXl={5} flex flexDirection="row" alignItems="center">
                     <Avatar />
                     <StyleMessage className="message">{this.props.children}</StyleMessage>
-                </div>
+                </Box>
                 <Button>Button Lor</Button>
             </div>
         )

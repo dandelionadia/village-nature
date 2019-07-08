@@ -1,22 +1,3 @@
-.header {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-}
-
-.infoPage {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 0.5fr 1fr;
-    grid-template-rows: 1fr;
-}
-
-.container-homePage {
-    background-color: $color-pink-background;
-    padding: 0 50px;
-}
-
 .background__img {
     width: 100%;
 }
