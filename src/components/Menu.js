@@ -18,16 +18,20 @@ class Menu extends React.Component {
         this.state = {
             menu: [
                 {
-                    value: 'foo'
+                    value: 'foo',
+                    url: '#'
                 },
                 {
-                    value: 'foo'
+                    value: 'foo',
+                    url: '#'
                 },
                 {
-                    value: 'foo'
+                    value: 'foo',
+                    url: '#'
                 },
                 {
-                    value: 'foo'
+                    value: 'foo',
+                    url: '#'
                 }
             ]
         }
@@ -40,7 +44,7 @@ class Menu extends React.Component {
             <StyleMenu>
                 {menu.map((item, index) => (
                     <li key={index} className="menu__item">
-                        <a className="menu__link" href="#">{item.value}</a>
+                        <a className="menu__link" href={item.url}>{item.value}</a>
                     </li>
                 ))}
             </StyleMenu>

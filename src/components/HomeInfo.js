@@ -2,8 +2,7 @@ import React from 'react';
 import { Button } from '../atoms/Button';
 import { Avatar } from '../atoms/Avatar';
 import styled from 'styled-components';
-import { useResponsiveProps } from 'atomic-layout';
-import { Box } from 'atomic-layout';
+import { useResponsiveProps, Box } from 'atomic-layout';
 
 const StyleTitle = styled.h1`
 font-size: ${({ fontSize }) => fontSize}px;
