@@ -1,17 +1,13 @@
 import React from 'react';
-import { Composition, Only } from 'atomic-layout';
-import { Menu } from '../components/Menu';
+import { Composition } from 'atomic-layout';
 import { HomeInfo } from '../components/HomeInfo';
-import { Logo } from '../atoms/Logo';
 
 const areasMobile = `
-    header
     image
     info
 `
 
 const areasTablet = `
-    header myMenu
     info image
 `
 
@@ -23,15 +19,8 @@ const HomePage = () => (
         templateColsMd="40% auto"
         gap={2}
     >
-        {({ Header, MyMenu, Info, Image }) => (
+        {({ Info, Image }) => (
             <>
-                <Header flex justifyContent="space-between">
-                    <Logo />
-                    <Only to="sm">burger</Only>
-                </Header>
-                <MyMenu>
-                    <Menu />
-                </MyMenu>
                 <Image>
                     <img className="background__img" src="https://cdn.dribbble.com/users/1355613/screenshots/6568571/____41.jpg" alt="image"></img>
                 </Image>
