@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from "react-router-dom"
 
 const StyleMenu = styled.ul`
     padding: 0;
@@ -18,16 +19,16 @@ class Menu extends React.Component {
         this.state = {
             menu: [
                 {
-                    value: 'foo',
-                    url: '#'
+                    value: 'home',
+                    url: '/'
                 },
                 {
-                    value: 'foo',
-                    url: '#'
+                    value: 'about',
+                    url: '/about'
                 },
                 {
-                    value: 'foo',
-                    url: '#'
+                    value: 'shop',
+                    url: '/shop'
                 },
                 {
                     value: 'foo',
@@ -44,7 +45,7 @@ class Menu extends React.Component {
             <StyleMenu>
                 {menu.map((item, index) => (
                     <li key={index} className="menu__item">
-                        <a className="menu__link" href={item.url}>{item.value}</a>
+                        <Link to={item.url} className="menu__link">{item.value}</Link>
                     </li>
                 ))}
             </StyleMenu>
