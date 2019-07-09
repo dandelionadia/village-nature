@@ -2,17 +2,28 @@ import React from 'react';
 import { HomePage } from './pages/HomePage';
 import './style/main.scss';
 import Layout from 'atomic-layout';
+import { Nav } from './Nav';
+import { About } from './About';
+import { Shop } from './Shop';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 
 Layout.configure({
-  defaultUnit: 'rem',
+    defaultUnit: 'rem',
 })
 
 function App() {
-  return (
-    <div className="App">
-      <HomePage />
-    </div>
-  );
+    return (
+        <Router>
+            <div className="App">
+                <Switch>
+                    <Route path="/" exact component={HomePage} />
+                    <Route path="/about" component={About} />
+                    <Route path="/shop" component={Shop} />
+                    <Route path="/nav" component={Nav} />
+                </Switch>
+            </div>
+        </Router>
+    );
 }
 
 export default App;
