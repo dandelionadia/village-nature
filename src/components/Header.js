@@ -24,7 +24,7 @@ const Header = () => (
             <>
                 <Header flex justifyContent="space-between">
                     <Logo />
-                    <Only to="sm">burger</Only>
+                    <Only to="md">burger</Only>
                 </Header>
                 <MyMenu>
                     <Menu />
