@@ -2,6 +2,7 @@ import React from 'react';
 import { Composition, Only } from 'atomic-layout';
 import { Menu } from '../components/Menu';
 import { Logo } from '../atoms/Logo';
+import Burger from '../atoms/Burger';
 
 
 const areasMobile = `
@@ -24,7 +25,9 @@ const Header = () => (
             <>
                 <Header flex justifyContent="space-between">
                     <Logo />
-                    <Only to="md">burger</Only>
+                    <Only to="md">
+                        <Burger />
+                    </Only>
                 </Header>
                 <MyMenu>
                     <Menu />
