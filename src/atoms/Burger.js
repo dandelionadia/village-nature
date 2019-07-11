@@ -15,10 +15,10 @@ const StyleBtnLineBlue = styled.div`
     margin: 0 0 5px 0;
 `
 
-function Burger() {
+function Burger({ onClick }) {
     return (
         <Box flex flexDirection="column" justifyContent="center" height="100%">
-            <div>
+            <div onClick={onClick}>
                 <StyleBtnLine></StyleBtnLine>
                 <StyleBtnLineBlue></StyleBtnLineBlue>
                 <StyleBtnLine></StyleBtnLine>
