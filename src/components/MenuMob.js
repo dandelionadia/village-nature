@@ -1,12 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
-import Layout, { Box } from 'atomic-layout'
+import Layout from 'atomic-layout'
+import { Link } from "react-router-dom"
+import { menu } from './Menu'
 
-const StyleMenuMob = styled.div`
-    background-color: red;
+const StyleMenuMob = styled.ul`
     position: absolute;
     top: 10vh;
     right: 0;
+    padding: 5px;
     color: black;
     transition: transform 0.7s;
 
@@ -17,11 +19,23 @@ const StyleMenuMob = styled.div`
     }
 `
 
+const StyleLi = styled.li`
+    padding: 1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    position: relative;
+    list-style: none;
+`
+
 function MenuMob({ isOpen }) {
     return (
-        <Box as={StyleMenuMob} isOpen={isOpen}>
-            <span>menu</span>
-        </Box>
+        <StyleMenuMob isOpen={isOpen}>
+            {menu.map((item, index) => (
+                <StyleLi key={index}>
+                    <Link className="menu__link" to={item.url}>{item.value}</Link>
+                </StyleLi>
+            ))}
+        </StyleMenuMob>
     );
 }
 

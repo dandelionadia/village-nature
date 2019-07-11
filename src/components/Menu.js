@@ -9,37 +9,32 @@ const StyleMenu = styled.ul`
 
     @media (min-width: 768px) {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
       }
 `
 
-class Menu extends React.Component {
-    constructor() {
-        super()
-        this.state = {
-            menu: [
-                {
-                    value: 'home',
-                    url: '/'
-                },
-                {
-                    value: 'about',
-                    url: '/about'
-                },
-                {
-                    value: 'shop',
-                    url: '/shop'
-                },
-                {
-                    value: 'foo',
-                    url: '#'
-                }
-            ]
-        }
+export const menu = [
+    {
+        value: 'home',
+        url: '/'
+    },
+    {
+        value: 'about',
+        url: '/about'
+    },
+    {
+        value: 'shop',
+        url: '/shop'
+    },
+    {
+        value: 'foo',
+        url: '#'
     }
+]
+
+class Menu extends React.Component {
 
     render() {
-        const { menu } = this.state
 
         return (
             <StyleMenu>

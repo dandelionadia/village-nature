@@ -17,7 +17,6 @@ const areasTablet = `
 
 const StyledHeader = styled.header`
     position: relative;
-    overflow: hidden;
 `
 
 class Header extends React.Component {
@@ -50,7 +49,7 @@ class Header extends React.Component {
                             </Only>
                             <MenuMob isOpen={this.state.isMenuOpen} />
                         </Header>
-                        <MyMenu>
+                        <MyMenu flex alignItems="center">
                             <Menu />
                         </MyMenu>
                     </>

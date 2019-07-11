@@ -15,7 +15,7 @@ Layout.configure({
 function App() {
     return (
         <Router>
-            <Box overflow="hidden">
+            <Box>
                 <Header />
                 <Switch>
                     <Route path="/" exact component={HomePage} />
