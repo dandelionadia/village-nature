@@ -27,8 +27,9 @@ class Header extends React.Component {
 
     ClickOnMenu = () => {
         console.log('okay')
+        const isMenuOpen = this.state.isMenuOpen
         this.setState({
-            isMenuOpen: true
+            isMenuOpen: !isMenuOpen
         })
     }
 
@@ -47,7 +48,7 @@ class Header extends React.Component {
                             <Only to="md">
                                 <Burger onClick={this.ClickOnMenu} />
                             </Only>
-                            <Only as={MenuMob} to="md" isOpen={this.state.isMenuOpen} />
+                            <MenuMob isOpen={this.state.isMenuOpen} />
                         </Header>
                         <MyMenu>
                             <Menu />
