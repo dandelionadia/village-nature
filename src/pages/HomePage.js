@@ -1,6 +1,13 @@
 import React from 'react';
 import { Composition } from 'atomic-layout';
 import { HomeInfo } from '../components/HomeInfo';
+import { createGlobalStyle } from 'styled-components'
+
+const GlobalStyle = createGlobalStyle`
+  body {
+    background-color: ${props => props.bgColor};
+  }
+`
 
 const areasMobile = `
     image
@@ -21,6 +28,7 @@ const HomePage = () => (
     >
         {({ Info, Image }) => (
             <>
+                <GlobalStyle bgColor="#FFF6E5" />
                 <Image>
                     <img className="background__img" src="https://cdn.dribbble.com/users/1355613/screenshots/6568571/____41.jpg" alt="img"></img>
                 </Image>
