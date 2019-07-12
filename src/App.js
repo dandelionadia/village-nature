@@ -1,10 +1,10 @@
-import React from 'react';
-import { HomePage } from './pages/HomePage';
-import './style/main.scss';
-import Layout from 'atomic-layout';
-import { About } from './About';
-import { Shop } from './Shop';
-import { Header } from './components/Header';
+import React from 'react'
+import { HomePage } from './pages/HomePage'
+import './style/main.scss'
+import Layout, { Box } from 'atomic-layout'
+import { About } from './pages/About'
+import { Shop } from './pages/Shop'
+import { Header } from './components/Header'
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 
 Layout.configure({
@@ -14,14 +14,14 @@ Layout.configure({
 function App() {
     return (
         <Router>
-            <div className="App">
+            <Box>
                 <Header />
                 <Switch>
                     <Route path="/" exact component={HomePage} />
                     <Route path="/about" component={About} />
                     <Route path="/shop" component={Shop} />
                 </Switch>
-            </div>
+            </Box>
         </Router>
     );
 }
