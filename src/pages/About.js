@@ -17,18 +17,20 @@ const areasMobile = `
   content
 `
 
-const areasTablet = `
+const areasDesktop = `
   image content
+  / 1fr 1fr
 `
 
 const StyledTitle = styled.h3`
-  margin: 0;
+  margin: 0 0 0 5px;
+  color: #F9744F;
 `
 
 const StyledWorkList = styled.div`
     column-count: 1;
 
-    @media (min-width: 992px) {
+    @media (min-width: 576px) {
         column-count: 2;
     }
 `
@@ -36,41 +38,56 @@ const StyledWorkList = styled.div`
 const StyledWorkListItem = styled.div`
     background-color: #F3FBFE;
     padding: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     display: inline-block;
     break-inside: avoid;
+    border-radius: 4px;
+`
+
+const StyledText = styled.div`
+    color: cadetblue;
 `
 
 const work = [
     {
-        title: 'title',
+        title: 'Fish',
         Icon: GiAnglerFish,
         text: 'It is a long established fact that a reader will be at its layout.'
     },
     {
-        title: 'title',
+        title: 'Frog',
         Icon: GiFrog,
-        text: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.'
+        text: 'It is a long established fact that a content of a page when looking at its layout.'
     },
     {
-        title: 'title',
+        title: 'Mouse',
         Icon: GiSeatedMouse,
         text: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.It is a long established fact that a reader will be distracted by'
     },
     {
-        title: 'title',
+        title: 'Dragonfly',
         Icon: GiDragonfly,
-        text: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.'
+        text: 'It is a long established fact that a reader will be at its layout.'
     },
     {
-        title: 'title',
+        title: 'Mouse',
         Icon: GiSeatedMouse,
-        text: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.It is a long established fact that a reader will be distracted by'
+        text: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.'
     },
     {
-        title: 'title',
+        title: 'Dragonfly',
         Icon: GiDragonfly,
-        text: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.'
+        text: 'It is a long established fact that a reader will be distracted by the readable content of a page.'
+    },
+    {
+        title: 'Fish',
+        Icon: GiAnglerFish,
+        text: 'It is a long established fact that a reader will be at its layout.'
+    },
+    {
+        title: 'Frog',
+        Icon: GiFrog,
+        text: 'It is a long established fact that a reader will be.'
     }
 
 ]
@@ -78,15 +95,14 @@ const work = [
 const About = () => (
     <Composition
         areas={areasMobile}
-        areasMd={areasTablet}
-        templateColsMd="1fr 1fr"
+        templateLg={areasDesktop}
         padding={2}
         gap={2}
     >
         {({ Image, Content }) => (
             <>
                 <GlobalStyle bgColor="#FFFFFF" />
-                <Image>
+                <Image maxWidthMdDown="600px" justify="center">
                     <img className="background__img" src="https://cdn.dribbble.com/users/1355613/screenshots/6141198/fishing.jpg" alt="img" />
                 </Image>
                 <Content as={StyledWorkList}>
@@ -101,11 +117,11 @@ const About = () => (
 
 const WorkListItem = ({ data }) => (
     <StyledWorkListItem>
-        <Box flex >
-            <data.Icon />
+        <Box flex alignItems="center" justify-content="right" marginBottom={0.5}>
+            <data.Icon fill="#F9744F" />
             <StyledTitle>{data.title}</StyledTitle>
         </Box>
-        <div>{data.text}</div>
+        <Box as={StyledText}>{data.text}</Box>
     </StyledWorkListItem>
 )
 
