@@ -14,15 +14,31 @@ const GlobalStyle = createGlobalStyle`
 
 const areasMobile = `
   image
-  foo
+  content
 `
 
 const areasTablet = `
-  image foo
+  image content
 `
 
-const StyleTitle = styled.h3`
+const StyledTitle = styled.h3`
   margin: 0;
+`
+
+const StyledWorkList = styled.div`
+    column-count: 1;
+
+    @media (min-width: 992px) {
+        column-count: 2;
+    }
+`
+
+const StyledWorkListItem = styled.div`
+    background-color: #F3FBFE;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    display: inline-block;
+    break-inside: avoid;
 `
 
 const work = [
@@ -45,6 +61,16 @@ const work = [
         title: 'title',
         Icon: GiDragonfly,
         text: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.'
+    },
+    {
+        title: 'title',
+        Icon: GiSeatedMouse,
+        text: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.It is a long established fact that a reader will be distracted by'
+    },
+    {
+        title: 'title',
+        Icon: GiDragonfly,
+        text: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.'
     }
 
 ]
@@ -53,35 +79,34 @@ const About = () => (
     <Composition
         areas={areasMobile}
         areasMd={areasTablet}
-        templateColsMd="1fr 1fr auto"
+        templateColsMd="1fr 1fr"
         padding={2}
         gap={2}
     >
-        {({ Image, Foo }) => (
+        {({ Image, Content }) => (
             <>
                 <GlobalStyle bgColor="#FFFFFF" />
                 <Image>
                     <img className="background__img" src="https://cdn.dribbble.com/users/1355613/screenshots/6141198/fishing.jpg" alt="img" />
                 </Image>
-                <Foo>
-                    <h3>About</h3>
+                <Content as={StyledWorkList}>
                     {work.map((item) => (
-                        <WorkListitem data={item} />
+                        <WorkListItem data={item} />
                     ))}
-                </Foo>
+                </Content>
             </>
         )}
     </Composition>
 )
 
-const WorkListitem = ({ data }) => (
-    <Box marginBottom={2} marginTop={2}>
+const WorkListItem = ({ data }) => (
+    <StyledWorkListItem>
         <Box flex >
             <data.Icon />
-            <StyleTitle>{data.title}</StyleTitle>
+            <StyledTitle>{data.title}</StyledTitle>
         </Box>
         <div>{data.text}</div>
-    </Box>
+    </StyledWorkListItem>
 )
 
 export { About }
