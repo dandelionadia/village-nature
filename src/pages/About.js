@@ -1,9 +1,7 @@
 import React from 'react'
 import '../style/main.scss'
-import { Composition } from 'atomic-layout'
-import { createGlobalStyle } from 'styled-components'
-import { Box } from 'atomic-layout'
-import styled from 'styled-components'
+import { Composition, Box } from 'atomic-layout'
+import styled, { createGlobalStyle } from 'styled-components'
 import { GiAnglerFish, GiFrog, GiSeatedMouse, GiDragonfly } from "react-icons/gi"
 
 const GlobalStyle = createGlobalStyle`
@@ -117,7 +115,7 @@ const About = () => (
 
 const WorkListItem = ({ data }) => (
     <StyledWorkListItem>
-        <Box flex alignItems="center" justify-content="right" marginBottom={0.5}>
+        <Box flex alignItems="center" marginBottom={0.5}>
             <data.Icon fill="#F9744F" />
             <StyledTitle>{data.title}</StyledTitle>
         </Box>
