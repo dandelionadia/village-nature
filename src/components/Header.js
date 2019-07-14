@@ -8,11 +8,11 @@ import Burger from '../atoms/Burger';
 
 
 const areasMobile = `
-    header
+    logo mobileMenu
 `
 
 const areasTablet = `
-    header myMenu
+    logo menu
 `
 
 const StyledHeader = styled.header`
@@ -35,23 +35,24 @@ class Header extends React.Component {
     render() {
         return (
             <Composition
+                as={StyledHeader}
                 areas={areasMobile}
                 areasMd={areasTablet}
-                templateColsMd="40% auto"
+                templateColsMd="40% 1fr"
                 gap={2}
+                justifyContent="space-between"
+                padding={1}
             >
-                {({ Header, MyMenu }) => (
+                {(Areas) => (
                     <>
-                        <Header as={StyledHeader} flex justifyContent="space-between" padding={2}>
-                            <Logo />
-                            <Only to="md">
-                                <Burger onClick={this.handleMenuClick} />
-                            </Only>
-                            <MenuMob isOpen={this.state.isMenuOpen} />
-                        </Header>
-                        <MyMenu flex alignItems="center">
+                        <Areas.Logo as={Logo} />
+                        <Areas.Menu flex alignItems="center">
                             <Menu />
-                        </MyMenu>
+                        </Areas.Menu>
+                        <Areas.MobileMenu>
+                            <Burger onClick={this.handleMenuClick} />
+                            <MenuMob isOpen={this.state.isMenuOpen} />
+                        </Areas.MobileMenu>
                     </>
                 )}
             </Composition>
