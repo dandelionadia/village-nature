@@ -46,6 +46,9 @@ const pictures = [
   }
 ]
 
+const index = pictures.length / 2
+const firstHalf = pictures.slice(0, index)
+const secondHalf = pictures.slice(index)
 function Shop() {
   return (
     <div>
@@ -59,7 +62,7 @@ function Shop() {
           <>
             <GlobalStyle bgColor="#FCF2E5" />
             <Areas.ContentLeft as="ContentLeft">
-              <Pictures items={pictures} />
+              <Pictures items={firstHalf} />
             </Areas.ContentLeft>
             <Areas.Image as="Image">
               <img
@@ -68,7 +71,9 @@ function Shop() {
                 alt="img"
               />
             </Areas.Image>
-            <Areas.ContentRight as="ContentRight">right</Areas.ContentRight>
+            <Areas.ContentRight as="ContentRight">
+              <Pictures items={secondHalf} />
+            </Areas.ContentRight>
           </>
         )}
       </Composition>
