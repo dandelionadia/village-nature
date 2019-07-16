@@ -1,5 +1,5 @@
 import React from 'react'
-import { Composition, Only } from 'atomic-layout'
+import { Composition } from 'atomic-layout'
 import styled from 'styled-components'
 import { Menu } from '../components/Menu'
 import MenuMob from '../components/MenuMob'

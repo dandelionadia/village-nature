@@ -17,7 +17,7 @@ function Pictures({ items }) {
       <Composition templateCols="repeat(3, 1fr)" templateColsLg="1fr">
         {items.map(item => (
           <Box as={StyledImage} padding="1rem" margin="1rem">
-            <img className="background__img" src={item.img} />
+            <img className="background__img" src={item.src} />
           </Box>
         ))}
       </Composition>
