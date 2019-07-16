@@ -4,6 +4,11 @@ import styled from 'styled-components'
 
 const StyledImage = styled.div`
   border: 8px solid black;
+
+  :hover {
+    transition: background-color 1.5s;
+    background-color: black;
+  }
 `
 
 function Pictures({ items }) {
