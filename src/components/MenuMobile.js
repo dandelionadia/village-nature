@@ -4,7 +4,7 @@ import Layout from 'atomic-layout'
 import { Link } from 'react-router-dom'
 import { menu } from './Menu'
 
-const StyleMenuMob = styled.ul`
+const StyleMenuMobile = styled.ul`
   position: absolute;
   top: 10vh;
   right: 0;
@@ -27,9 +27,9 @@ const StyleLi = styled.li`
   list-style: none;
 `
 
-function MenuMob({ isOpen }) {
+function MenuMobile({ isOpen }) {
   return (
-    <StyleMenuMob isOpen={isOpen}>
+    <StyleMenuMobile isOpen={isOpen}>
       {menu.map((item, index) => (
         <StyleLi key={index}>
           <Link className="menu__link" to={item.url}>
@@ -37,8 +37,8 @@ function MenuMob({ isOpen }) {
           </Link>
         </StyleLi>
       ))}
-    </StyleMenuMob>
+    </StyleMenuMobile>
   )
 }
 
-export default MenuMob
+export default MenuMobile

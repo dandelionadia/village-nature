@@ -46,10 +46,10 @@ const pictures = [
   }
 ]
 
-const index = pictures.length / 2
-const firstHalf = pictures.slice(0, index)
-const secondHalf = pictures.slice(index)
 function Shop() {
+  const index = Math.ceil(pictures.length / 2)
+  const firstHalf = pictures.slice(0, index)
+  const secondHalf = pictures.slice(index)
   return (
     <div>
       <GlobalStyle bgColor="#FCF2E5" />

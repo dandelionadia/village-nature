@@ -2,7 +2,7 @@ import React from 'react'
 import { Composition } from 'atomic-layout'
 import styled from 'styled-components'
 import { Menu } from '../components/Menu'
-import MenuMob from '../components/MenuMob'
+import MenuMobile from '../components/MenuMobile'
 import { Logo } from '../atoms/Logo'
 import Burger from '../atoms/Burger'
 
@@ -24,7 +24,6 @@ class Header extends React.Component {
   }
 
   handleMenuClick = () => {
-    console.log('okay')
     const isMenuOpen = this.state.isMenuOpen
     this.setState({
       isMenuOpen: !isMenuOpen
@@ -50,7 +49,7 @@ class Header extends React.Component {
             </Areas.Menu>
             <Areas.MobileMenu>
               <Burger onClick={this.handleMenuClick} />
-              <MenuMob isOpen={this.state.isMenuOpen} />
+              <MenuMobile isOpen={this.state.isMenuOpen} />
             </Areas.MobileMenu>
           </>
         )}
