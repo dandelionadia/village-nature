@@ -1,5 +1,4 @@
 import React from 'react'
-import '../style/main.scss'
 import styled, { createGlobalStyle } from 'styled-components'
 import Layout, { Composition, Box } from 'atomic-layout'
 
@@ -53,7 +52,7 @@ function Contact() {
               />
             </Image>
             <Info>
-              <Box as={StyledInfoContact}>Contact Us 🐾</Box>
+              <StyledInfoContact>Contact Us 🐾</StyledInfoContact>
             </Info>
           </>
         )}
