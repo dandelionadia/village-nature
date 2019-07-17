@@ -9,9 +9,13 @@
 
   &__link {
     text-decoration: none;
-    color: white;
+    color: $color-black;
     padding: 0.5rem;
     z-index: 3;
+
+    &--primaryColor {
+      color: white;
+    }
 
     &:hover {
       color: $color-blue;

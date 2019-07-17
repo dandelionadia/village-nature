@@ -36,7 +36,7 @@ function MenuMobile({ isOpen }) {
     <StyleMenuMobile isOpen={isOpen}>
       {menu.map((item, index) => (
         <StyleLi key={index}>
-          <Link className="menu__link" to={item.url}>
+          <Link className="menu__link menu__link--primaryColor" to={item.url}>
             {item.value}
           </Link>
         </StyleLi>
