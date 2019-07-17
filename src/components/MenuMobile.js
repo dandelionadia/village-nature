@@ -5,12 +5,15 @@ import { Link } from 'react-router-dom'
 import { menu } from './Menu'
 
 const StyleMenuMobile = styled.ul`
+  background-color: black;
+  opacity: 0.9;
   position: absolute;
   top: 10vh;
   right: 0;
   padding: 5px;
   color: black;
   transition: transform 0.7s;
+  z-index: 1;
 
   transform: translateX(${({ isOpen }) => (isOpen ? 0 : '100%')});
 
@@ -25,6 +28,7 @@ const StyleLi = styled.li`
   font-weight: 600;
   position: relative;
   list-style: none;
+  text-align: center;
 `
 
 function MenuMobile({ isOpen }) {
