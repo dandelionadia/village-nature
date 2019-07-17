@@ -1,7 +1,7 @@
-import React from 'react';
-import styled from 'styled-components';
-import { Link } from 'react-router-dom';
-import Layout from 'atomic-layout';
+import React from 'react'
+import styled from 'styled-components'
+import { Link } from 'react-router-dom'
+import Layout from 'atomic-layout'
 
 const StyleMenu = styled.ul`
   padding: 0;
@@ -12,7 +12,7 @@ const StyleMenu = styled.ul`
     display: flex;
     justify-content: space-around;
   }
-`;
+`
 
 export const menu = [
   {
@@ -28,10 +28,10 @@ export const menu = [
     url: '/shop'
   },
   {
-    value: 'foo',
-    url: '#'
+    value: 'contact',
+    url: '/contact'
   }
-];
+]
 
 class Menu extends React.Component {
   render() {
@@ -45,8 +45,8 @@ class Menu extends React.Component {
           </li>
         ))}
       </StyleMenu>
-    );
+    )
   }
 }
 
-export { Menu };
+export { Menu }
