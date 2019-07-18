@@ -1,27 +1,28 @@
 $color-red: red;
 $color-blue: blue;
-$color-orange: #FFC14D;
+$color-blue-light: #2ac4f4;
+$color-orange: #ffc14d;
 $color-white: white;
 $color-grey: rgb(167, 164, 164);
 $color-black: rgb(27, 27, 27);
-$color-pink-background: #FFF6E5;
+$color-pink-background: #fff6e5;
 
 h1 {
-    font-size: 70px;
-    font-weight: 600;
-    text-transform: capitalize;
-    margin: 0;
+  font-size: 70px;
+  font-weight: 600;
+  text-transform: capitalize;
+  margin: 0;
 }
 
 h2 {
-    font-weight: 300;
-    font-size: 30px;
-    margin: 0;
+  font-weight: 300;
+  font-size: 30px;
+  margin: 0;
 }
 
 h3 {
-    color: $color-blue;
-    font-size: 18px;
-    font-weight: 600;
-    margin: 0;
+  color: $color-blue;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
 }

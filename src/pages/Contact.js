@@ -1,6 +1,6 @@
 import React from 'react'
 import styled, { createGlobalStyle } from 'styled-components'
-import Layout, { Composition, Box } from 'atomic-layout'
+import Layout, { Composition } from 'atomic-layout'
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -15,6 +15,7 @@ const areasMobile = `
 
 const StyledImage = styled.img`
   margin: 0 auto;
+  display: block;
 
   @media (min-width: ${Layout.breakpoints.md.minWidth}) {
     max-width: 60%;
@@ -45,8 +46,7 @@ function Contact() {
         {({ Image, Info }) => (
           <>
             <Image>
-              <Box
-                as={StyledImage}
+              <StyledImage
                 className="background__img"
                 src="https://cdn.dribbble.com/users/1355613/screenshots/6501579/____9.jpg"
               />
